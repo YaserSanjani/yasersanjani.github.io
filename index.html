@@ -8,24 +8,52 @@
       margin: 0;
       height: 100vh;
       display: flex;
+      font-family: Arial;
+      background: #111;
+      color: white;
+    }
+
+    /* سایدبار سمت چپ */
+    .sidebar {
+      width: 220px;
+      background: #1a1a1a;
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #333;
+    }
+
+    /* بخش وسط */
+    .content {
+      flex: 1;
+      display: flex;
       justify-content: center;
       align-items: center;
-      background: #111;
-      font-family: Arial;
+      text-align: center;
     }
 
     h1 {
-      color: white;
       font-size: 40px;
-      text-align: center;
-
-      /* انیمیشن */
       animation: fadeInUp 2s ease-in-out infinite alternate;
     }
 
     @keyframes fadeInUp {
       0% {
-        opacity: 0.2;
+        opacity: 0.3;
         transform: translateY(20px);
       }
       100% {
@@ -38,9 +66,20 @@
 
 <body>
 
-  <h1>
-    0777887317به وبسایت یاسر سنجنی خوش آمدید
-  </h1>
+  <!-- سمت چپ -->
+  <div class="sidebar">
+    <a href="#">محصولات</a>
+    <a href="#">اپلیکیشن ها</a>
+    <a href="#">آموزش ها</a>
+    <a href="#">درباره</a>
+  </div>
+
+  <!-- وسط صفحه -->
+  <div class="content">
+    <h1>
+      به وبسایت یاسر سنجنی خوش آمدید
+    </h1>
+  </div>
 
 </body>
 </html>
